@@ -62,19 +62,19 @@ startBtn.addEventListener('click', () => {
   }, 1000);
 });
 
-startBtn.addEventListener('click', () => {
-  timerId = setInterval(() => {
-    const selectedCalendarDates = calendar.selectedDates[0];
-    const pastOrFuture = selectedCalendarDates - new Date();
-    if (pastOrFuture < 0) {
-      inputEl.disabled = false;
-      startBtn.disabled = false;
-      stopBtn.disabled = true;
-      Report.success('Time is over', 'Choose a new timer date', 'Okay');
-      clearInterval(timerId);
-    }
-  }, 1000);
-});
+// startBtn.addEventListener('click', () => {
+//   timerId = setInterval(() => {
+//     const selectedCalendarDates = calendar.selectedDates[0];
+//     const pastOrFuture = selectedCalendarDates - new Date();
+//     if (pastOrFuture < 0) {
+//       inputEl.disabled = false;
+//       startBtn.disabled = false;
+//       stopBtn.disabled = true;
+//       Report.success('Time is over', 'Choose a new timer date', 'Okay');
+//       clearInterval(timerId);
+//     }
+//   }, 1000);
+// });
 
 stopBtn.addEventListener('click', () => {
   clearInterval(intervalId);
